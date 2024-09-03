@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Website Detector</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+        }
+        h1 {
+            text-align: center;
+            font-weight: bold;
+            text-decoration: underline;
+            color: black;
+            margin-top: 20px;
+        }
+        .navbar-nav .nav-link {
+            color: black;
+            font-weight: bold;
+        }
+        .navbar-nav .nav-link:hover {
+            background-color: #b2ebf2;
+            color: white;
+        }
+        .search-bar {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .stat-table {
+            margin: 30px auto;
+            width: 80%;
+        }
+        .footer {
+            background-color: #b2ebf2;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .submit-btn {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .result-box {
+            border: 2px solid #b2ebf2;
+            padding: 15px;
+            margin: 30px auto;
+            width: 80%;
+            text-align: center;
+            background-color: #e0f7fa;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>FAKE WEBSITE DETECTOR</h1>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showContent('about-us')">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showContent('contact-us')">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showContent('see-history')">See History</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content Display -->
+    <div id="about-us" class="content-section" style="display: none;">
+        <div class="container">
+            <p>About us content goes here.</p>
+        </div>
+    </div>
+    <div id="contact-us" class="content-section" style="display: none;">
+        <div class="container">
+            <p>Contact us content goes here.</p>
+        </div>
+    </div>
+    <div id="see-history" class="content-section" style="display: none;">
+        <div class="container">
+            <p>History content goes here.</p>
+        </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" class="form-control w-50 mx-auto" placeholder="Enter URL">
+        <button class="submit-btn">Submit</button>
+    </div>
+
+    <!-- Statistic Table -->
+    <div class="container stat-table">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>URL</td>
+                    <td>Example URL</td>
+                </tr>
+                <tr>
+                    <td>Domain Age</td>
+                    <td>2 Years</td>
+                </tr>
+                <tr>
+                    <td>SSL Certificate</td>
+                    <td>Valid</td>
+                </tr>
+                <tr>
+                    <td>IP Address</td>
+                    <td>192.168.1.1</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result-box">
+        <p>Final result will be displayed here.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Follow us on:</p>
+        <img src="https://via.placeholder.com/30" alt="Social Media Logo">
+        <p>Address: 1234 Street Name, City, Country</p>
+        <p>Phone: +1234567890</p>
+    </div>
+
+    <script>
+        function showContent(section) {
+            document.getElementById('about-us').style.display = 'none';
+            document.getElementById('contact-us').style.display = 'none';
+            document.getElementById('see-history').style.display = 'none';
+            document.getElementById(section).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
